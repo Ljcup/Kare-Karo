@@ -15,7 +15,9 @@
 
         echo json_encode($response);
     }else{
-        echo "No records";
+        $response['id'] = null;
+        $response['mobilenumber'] = null;
+        echo json_encode($response);
     }
     
     mysqli_close($conn);
